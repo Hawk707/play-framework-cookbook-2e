@@ -10,7 +10,11 @@ import views.html.*;
  */
 public class Application extends Controller {
 
-public Result hello() {
+public Result hello(){
       return ok("Hello World");
+    }
+	
+public Result echo(String msg) {
+      return ok("Echoing "+msg);
     }
 }
