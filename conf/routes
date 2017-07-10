@@ -18,3 +18,5 @@ GET    /hello         controllers.Application.hello()
 GET    /echo/:msg     controllers.Application.echo(msg : String)
 
 GET    /v2/hello      controllers.Application.helloRedirect()
+
+GET    /products      controllers.Application.listProducts
