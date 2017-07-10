@@ -1,7 +1,8 @@
 @(products: Collection[String])
 
-<h3>@products.mkString(",")</h3>
-
 @import tags._
- 
+@import common._
+
+@mainLayout(title = "Acme Products") {
 @productsIterator(products)
+}
