@@ -17,4 +17,8 @@ public Result hello(){
 public Result echo(String msg) {
       return ok("Echoing "+msg);
     }
+	
+public Result helloRedirect() {
+      return redirect(controllers.routes.Application.echo("HelloWorldv2"));
+    }
 }

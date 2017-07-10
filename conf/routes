@@ -16,3 +16,5 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET    /hello         controllers.Application.hello()
 
 GET    /echo/:msg     controllers.Application.echo(msg : String)
+
+GET    /v2/hello      controllers.Application.helloRedirect()
