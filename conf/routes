@@ -23,3 +23,6 @@ GET    /products      controllers.Application.listProducts
 
 GET    /products.txt    controllers.Application.listProductsAsTXT()
 GET    /products.xml    controllers.Application.listProductsAsXML()
+
+GET    /products/new    controllers.Products.create() 
+POST   /products        controllers.Products.postForm()

@@ -1,0 +1,25 @@
+@(productForm: Form[models.Product])
+
+@import common._
+
+@mainLayout(title = "New Product") {
+  
+  @if(flash.get("success") != null) {
+	<p>@flash.get("success")</p>
+  }
+
+  @if(productForm.hasGlobalErrors) {
+	<ul>
+	@for(error <- productForm.globalErrors) {
+	  <li>@error.message</li>
+	}
+	</ul>
+  }
+
+  @helper.form(action = routes.Products.postForm()) {
+	@helper.inputText(productForm("id"))
+	@helper.inputText(productForm("name"))
+
+	<input type="submit">
+  }
+}
