@@ -34,4 +34,14 @@ public String getName() {
 public void setName(String name) {
   this.name = name;
 }
+
+
+  public String validate() {
+    if (name.length() < 3 || name.length() > 100) {
+      return "Name must be at least 3 characters or a maximum of 100 characters";
+    }
+    return null;
+  }
+
 }
+
